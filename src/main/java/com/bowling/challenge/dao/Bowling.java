@@ -10,4 +10,5 @@ public interface Bowling {
     Map<String, Game> populateGameMap(List<String> lines);
     void handleScore();
     void display();
+    void init();
 }

@@ -222,4 +222,9 @@ public class BowlingServiceImpl implements BowlingService {
         }
         return pinFallBuilder;
     }
+
+    @Override
+    public void restart() {
+        rowList.clear();
+    }
 }

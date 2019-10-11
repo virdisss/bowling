@@ -6,4 +6,5 @@ import java.util.Map;
 public interface BowlingService {
     void displayScores();
     void createRowsToDisplay(Map<String, Game> gameMap);
+    void restart();
 }

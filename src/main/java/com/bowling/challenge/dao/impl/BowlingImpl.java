@@ -35,7 +35,7 @@ public class BowlingImpl implements Bowling {
             while ((currentLine = bufferedReader.readLine()) != null) {
 
                 String scoreString = currentLine.split("\\s+")[1];
-                if (!scoreString.equalsIgnoreCase("F") && !scoreString.matches("-?\\d+(\\.\\d+)?")) {
+                if (!scoreString.equalsIgnoreCase("F") && !scoreString.matches("^[0-9]+$")) {
                     throw new BowlingException(String.format("Incorrect format: input (%s) must be numeric", scoreString));
                 }
                 
@@ -73,5 +73,11 @@ public class BowlingImpl implements Bowling {
     @Override
     public void display() {
         bowlingService.displayScores();
+    }
+
+    @Override
+    public void init() {
+        gameMap.clear();
+        bowlingService.restart();
     }
 }

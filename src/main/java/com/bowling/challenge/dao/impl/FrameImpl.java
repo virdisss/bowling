@@ -2,7 +2,7 @@ package com.bowling.challenge.dao.impl;
 
 import static com.bowling.challenge.constants.Constants.NUMBER_CHANCES_PER_FRAME;
 import static com.bowling.challenge.constants.Constants.NUMBER_PINS;
-import com.bowling.challenge.dao.Chance;
+import com.bowling.challenge.model.Chance;
 import com.bowling.challenge.dao.Frame;
 
 public class FrameImpl implements Frame {
